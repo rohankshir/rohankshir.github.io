@@ -1,0 +1,25 @@
+# Dependencies
+markdown:            redcarpet
+highlighter:         pygments
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:                Inquiries of a Systems Engineer
+tagline:             'Produce, Consume, Learn, Repeat'
+description:         'A living work of my recent musings on technology, programming, machine learning, and philosophies.'
+url:                 http://rohankshir.github.io
+baseurl:             /
+paginate:            5
+
+# About/contact
+author:
+  name:              Rohan Kshirsagar
+  email:             rohank12345@gmail.com
+
+# Custom vars
+version:             1.0.0
