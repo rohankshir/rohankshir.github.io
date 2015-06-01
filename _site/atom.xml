@@ -4,7 +4,7 @@
  <title>Inquiries of a Systems Engineer</title>
  <link href="http://rohankshir.github.io/atom.xml" rel="self"/>
  <link href="http://rohankshir.github.io/"/>
- <updated>2015-05-31T21:44:08-04:00</updated>
+ <updated>2015-05-31T22:05:52-04:00</updated>
  <id>http://rohankshir.github.io</id>
  <author>
    <name>Rohan Kshirsagar</name>
@@ -106,7 +106,7 @@ Sometimes Big O behavior is not indicative of our application. Sometimes we want
 
 &lt;h3 id=&quot;results&quot;&gt;Results&lt;/h3&gt;
 
-&lt;p&gt;Alas, our computer science professors taught us well. A hashmap is the way to go. Or is it? We several parameters, one of which we varied. We kept the keyspace limited to 10000. &lt;/p&gt;
+&lt;p&gt;Alas, our computer science professors taught us well. A hashmap is the way to go. Or is it? I had several parameters, one of which we varied. I kept the keyspace limited to 10000 for the purpose of clarity. &lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// constants&lt;/span&gt;
 
@@ -465,7 +465,7 @@ Sometimes Big O behavior is not indicative of our application. Sometimes we want
 
 &lt;h3 id=&quot;results&quot;&gt;Results&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/rvo.png&quot; alt=&quot;RVO&quot; title=&quot;Return Value Optimization Benchmarks&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/public/rvo.png&quot; alt=&quot;RVO&quot; title=&quot;Return Value Optimization Benchmarks&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;The x axis describes the size of the vector being create by each range function, and the y axis represents the real time to accomplish this task. The unix &lt;code&gt;time&lt;/code&gt; command was used to measure duration, and matplotlib was used to plot this data. As you can see, the rvo and standard implementations are relatively equivalent, on my machine (Retina Macbook Pro), the rvo implementation was actually slightly faster over several runs. The implementation that simulates what would have happened if rvo didn&amp;#39;t exist (without-rvo) is about 50 % slower, with just an extra copy operation. &lt;/p&gt;
 

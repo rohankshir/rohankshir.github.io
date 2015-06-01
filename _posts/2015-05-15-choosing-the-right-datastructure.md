@@ -105,7 +105,7 @@ The task here is simple, serially iterate through the queries, and check whether
 
 ### Results
 
-Alas, our computer science professors taught us well. A hashmap is the way to go. Or is it? We several parameters, one of which we varied. We kept the keyspace limited to 10000. 
+Alas, our computer science professors taught us well. A hashmap is the way to go. Or is it? I had several parameters, one of which we varied. I kept the keyspace limited to 10000 for the purpose of clarity. 
 
 {% highlight c++ %}
 // constants

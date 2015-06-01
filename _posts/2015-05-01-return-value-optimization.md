@@ -105,7 +105,7 @@ void without-rvo-range(std::vector<int>& result,int min, int max)
 
 ### Results
 
-![RVO]({{ site.baseurl }}rvo.png "Return Value Optimization Benchmarks")
+![RVO]({{ site.baseurl }}public/rvo.png "Return Value Optimization Benchmarks")
 
 The x axis describes the size of the vector being create by each range function, and the y axis represents the real time to accomplish this task. The unix `time` command was used to measure duration, and matplotlib was used to plot this data. As you can see, the rvo and standard implementations are relatively equivalent, on my machine (Retina Macbook Pro), the rvo implementation was actually slightly faster over several runs. The implementation that simulates what would have happened if rvo didn't exist (without-rvo) is about 50 % slower, with just an extra copy operation. 
 
