@@ -4,7 +4,7 @@
  <title>Inquiries of a Systems Engineer</title>
  <link href="http://rohankshir.github.io/atom.xml" rel="self"/>
  <link href="http://rohankshir.github.io/"/>
- <updated>2015-05-31T22:05:52-04:00</updated>
+ <updated>2015-06-02T20:27:47-04:00</updated>
  <id>http://rohankshir.github.io</id>
  <author>
    <name>Rohan Kshirsagar</name>
@@ -382,7 +382,7 @@ Sometimes Big O behavior is not indicative of our application. Sometimes we want
 
 &lt;h3 id=&quot;what-is-rvo?&quot;&gt;What is RVO?&lt;/h3&gt;
 
-&lt;p&gt;&lt;em&gt;One&lt;/em&gt; such optimization is called Return Value Optimization. As &lt;a href=&quot;wikipedia.org/return-value-optimization&quot;&gt;wikipedia&lt;/a&gt; states, &lt;abbr title=&quot;Return value optimization&quot;&gt;RVO&lt;/abbr&gt; is when an extra parameter is passed into the function to be populated with the return value instead of being populated in the return value register. This parameter is a pointer to the variable being assigned the output of the function. This can be used to save an extra copy via assignment, as well as simplifying the code and consequently, more readable.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;One&lt;/em&gt; such optimization is called Return Value Optimization. As &lt;a href=&quot;http://en.wikipedia.org/wiki/Return_value_optimization&quot;&gt;wikipedia&lt;/a&gt; states, &lt;abbr title=&quot;Return value optimization&quot;&gt;RVO&lt;/abbr&gt; is when an extra parameter is passed into the function to be populated with the return value instead of being populated in the return value register. This parameter is a pointer to the variable being assigned the output of the function. This can be used to save an extra copy via assignment, as well as simplifying the code and consequently, more readable. This optimization is done by the compiler when it realizes that the return value of the function is being assigned directly to a newly declared variable.&lt;/p&gt;
 
 &lt;p&gt;Let&amp;#39;s say you want to write a range function in C++ which populates a &lt;a href=&quot;http://en.cppreference.com/w/cpp/container/vector&quot;&gt;&lt;code&gt;std::vector&lt;/code&gt;&lt;/a&gt; with a range of integers. A simple range function might have a min and max argument, with the assertion that max must be greater than min. Since we are returning a container that can dynamically grow and shrink, thus makes use of heap memory and executes a deep copy within a copy constructor or assignment operator, we&amp;#39;d want to avoid copies &lt;bold&gt;as much as possible&lt;/bold&gt;. The standard way to do this is pass in the vector that we want to populate by reference, and return void.&lt;/p&gt;
 
