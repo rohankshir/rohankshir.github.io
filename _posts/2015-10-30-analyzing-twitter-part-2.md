@@ -55,9 +55,9 @@ parse(spec_uri, "#vis3");
 
 <br>
 
-After a quick glance, you can see that the smaller words tend to be less informative, short in length, and morphologically similar. Words like *the*, *this* are determiners and pretty much used ubiquitously. The words with larger font are more interesting and meaningful. These words could possibly be used for more interesting models, like topic models or sentiment analysis.
+After a quick glance, you can see that the smaller words tend to be less informative, short in length, and morphologically similar. Words like *the*, *this* are determiners and pretty much used ubiquitously. The words *rainy* and *wondering* have larger font and are more interesting and meaningful. These words could possibly be used for more interesting models, like topic models or sentiment analysis.
 
-At the same time, it's much harder to gauge word salience when the length of a tweet is constrained to 140 characters. This limit doesn't allow for much repetion of words, thereby drastically reducing the variation on the term frequency portion of `tf-idf`. Another limitation of tf-idf is the lack of describing relations between words. In the word cloud above, you can see that the words *was* and *like* are very small, and thus have low scores. What you can't see (without implicitly understanding English and some deduction) that the two words are used often in conjunction: *was like*. 
+At the same time, it's much harder to gauge word salience when the length of a tweet is constrained to 140 characters. This limit doesn't allow for much repetion of words, thereby drastically reducing the variation on the term frequency portion of `tf-idf`. Another limitation of tf-idf is the lack of describing relations between words. In the word cloud above, you can see that the words *was* and *like* are very small, and thus have low scores. What you can't see, without implicitly understanding English and some deduction, that the two words are used often in conjunction: *was like*. 
 
 For the next post, we'll explore bigrams and different association measuresgir. Cheers!
 
