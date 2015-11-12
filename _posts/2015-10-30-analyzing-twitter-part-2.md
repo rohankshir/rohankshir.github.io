@@ -28,7 +28,7 @@ Inverse document frequency measures how important the word is in the entire set 
 
 $N$ is the number of documents and $n_t$ is the total number of documents that contain the term. When you multiply $tf$ with $idf$, you offset the strength of the term in the document by the popularity of it in the set of documents. Pretty straightforward, right?
 
-Let's run it on our Twitter corpus and see what we find. `skikit-learn` has a package, `sklearn.feature_extraction.text.TfidfVectorizer` that can help us compute `tf-idf` scores for a large set of tweets. In fact, it can be done in 5 lines.
+Let's run it on our Twitter corpus and see what we find. `skikit-learn` has a package, `sklearn.feature_extraction.text.TfidfVectorizer` that can help us compute `tf-idf` scores for a large set of tweets. In fact, it can be done in 4 lines.
 
 {% highlight python %}
 vectorizer = TfidfVectorizer(min_df=1)
