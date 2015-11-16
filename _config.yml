@@ -12,9 +12,9 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:                Inquiries of a Systems Engineer
-tagline:             'Produce, Consume, Learn, Repeat'
-description:         'A living work of my recent musings on technology, programming, machine learning, and philosophies.'
+title:               rohan's github.io
+tagline:             'Curiosity has its own reason for existing'
+description:         'A living work of my recent curiosities on NLP, programming, machine learning, and philosophies.'
 url:                 http://rohankshir.github.io
 baseurl:             /
 paginate:            5

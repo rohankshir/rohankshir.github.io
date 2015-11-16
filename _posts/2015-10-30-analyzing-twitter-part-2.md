@@ -14,7 +14,7 @@ In the [last post]({% post_url 2015-06-30-analyzing-twitter-part-1 %}), we motiv
 tfidf_{t,d} = tf_{t,d} * idf_{t,d}
 \end{equation}
 
-The most widely used measure of term frequency is the raw frequency of the term in the document. This is simplest, but other weight mechanisms include binary (whether it exists or not) and log normalization. We will use raw frequency for now.
+The most widely used measure of term frequency is the raw frequency of the term in the document. This is simplest, but other weight mechanisms include binary and log normalization. We will use raw frequency for now.
 
 \begin{equation}
 tf_{t,d} = f_{t,d}
@@ -42,8 +42,7 @@ We end up with a list of tuples that have the terms and their respective scores 
 
 <br><br>  
 
-<div id="vis3"></div>
-<script type="text/javascript">
+<div id="vis3"></div> <script type="text/javascript">
 // parse a spec and create a visualization view
 function parse(spec,div_id) {
   vg.parse.spec(spec, function(chart) { chart({el:div_id}).update(); });
@@ -59,7 +58,9 @@ After a quick glance, you can see that the smaller words tend to be less informa
 
 At the same time, it's much harder to gauge word salience when the length of a tweet is constrained to 140 characters. This limit doesn't allow for much repetion of words, thereby drastically reducing the variation on the term frequency portion of `tf-idf`. Another limitation of tf-idf is the lack of describing relations between words. In the word cloud above, you can see that the words *was* and *like* are very small, and thus have low scores. What you can't see, without implicitly understanding English and some deduction, that the two words are used often in conjunction: *was like*. 
 
-For the next post, we'll explore bigrams and different association measuresgir. Cheers!
+
+
+For the next post, we'll explore bigrams and different association measures. Cheers!
 
 
 
