@@ -42,13 +42,15 @@ We end up with a list of tuples that have the terms and their respective scores 
 
 <br><br>  
 
-<div id="vis3"></div> <script type="text/javascript">
-// parse a spec and create a visualization view
+<div id="vis3"></div>
+<script type="text/javascript">
+
 function parse(spec,div_id) {
   vg.parse.spec(spec, function(chart) { chart({el:div_id}).update(); });
 }
-spec_uri = "{{ site.baseurl }}public/tfidf_spec.json";
+spec_uri = "/public/tfidf_spec.json";
 parse(spec_uri, "#vis3");
+
 </script>
 
 
