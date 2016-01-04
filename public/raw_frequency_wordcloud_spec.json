@@ -8,7 +8,7 @@
   "data": [
     {
       "name": "table",
-      "url":"public/raw_frequency_bigrams.json",
+      "url":"/public/raw_frequency_bigrams.json",
       "transform": [
         {
           "type": "formula", "field": "angle",
