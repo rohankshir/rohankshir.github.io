@@ -13,7 +13,7 @@ How do we gather more useful and interesting facets of [Netspeak](https://us.sag
 
 ## Bigrams
 
-Viewing words in isolation in a document can be a simple and effective, but often falls victim to the problems outlined above. Computational linguists ameleliorate this by looking at sequences of words. Bigrams are two words in sequence that occur in a document. More generally, an [`n-gram`](https://en.wikipedia.org/wiki/N-gram) is a sequence of *n* words in text. `n-gram` models are used in all types of language applications, such as word prediction, speech recognition, spelling correction, language identification, etc.
+Viewing words in isolation in a document can be a simple and effective, but often falls victim to the problems outlined above. Computational linguists ameliorate these issues by observing at sequences of words. Bigrams are two words in sequence that occur in a document. More generally, an [`n-gram`](https://en.wikipedia.org/wiki/N-gram) is a sequence of *n* words in text. `n-gram` models are used in all types of language applications, such as word prediction, speech recognition, spelling correction, language identification, etc.
 
 How do we count all the bigrams in a collection of tweets? We can aggregate all the tweets into a single sequence of words, while separating each tweet with a separator word, such as "STOP".
 
@@ -32,7 +32,7 @@ Subsequently, the goal is to count and score these bigrams to gain insights. The
 
 ### Raw Frequency
 
-This association measure simply scores the bigrams of the corpus by their raw frequency. The most highly occuring bigrams will be scored highest. Below are a list of highest scored bigrams according to this measure, with a code snippet for solidarity. A few examples like "thank you" and "good morning" show commonly used phrases that are imbued with meaning. Other popular bigrams give the feeling of the emotional stream of conscious, with many references to the subject, such as "I feel", "I want", "I need", and "you have". Finally, we can see commonly used [collocations](https://en.wikipedia.org/wiki/Collocation), such as "ready for", "such as", "at least", "to go".
+This association measure simply scores the bigrams of the corpus by their raw frequency. The most frequently occuring bigrams will be scored highest. Below are a list of highest scored bigrams according to this measure, with a code snippet for solidarity. A few examples like "thank you" and "good morning" show commonly used phrases that are commonly embedded in discourse. Other popular bigrams give the feeling of the emotional stream of conscious, with many references to the subject, such as "I feel", "I want", "I need", and "you have". Finally, we can see commonly used [collocations](https://en.wikipedia.org/wiki/Collocation), such as "ready for", "such as", "at least", "to go".
 
 The raw frequency scoring technique gleans some general, conversational facets of the English language. Many of these can be instrumental in guaging sentiment, constituents, and discourse. 
 
