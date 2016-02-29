@@ -197,10 +197,10 @@ def preprocess_word(s):
 <div id="vis4"></div>
 <center>Topic words 2000 to 2005</center>
 <br/>
-<div id="vis5"></div>
+<div id="vis7"></div>
 <center>Topic words for 2005 to 2009</center>
 <br/>
-<div id="vis6"></div>
+<div id="vis8"></div>
 <center>Topic Words for 2010 to 2014</center>
 
 <script type="text/javascript">
@@ -211,9 +211,9 @@ function parse(spec,div_id) {
 spec_uri = "/public/hiphop_topics_vega_spec.json";
 parse(spec_uri, "#vis4");
 spec_uri = "/public/hiphop_2006-2010_vega_spec.json";
-parse(spec_uri, "#vis5");
+parse(spec_uri, "#vis7");
 spec_uri = "/public/hiphop_2010-2014_vega_spec.json";
-parse(spec_uri, "#vis6");
+parse(spec_uri, "#vis8");
 
 </script>
 
