@@ -38,65 +38,9 @@ The [Billboard charts](http://www.billboard.com/charts) have been around for as 
 
 After playing around with it for a bit in interactive python, I realized that it didn't always fetch the charts for a given day, but if called the API for the next 6 days, I'd end up getting a hit. This signaled to me, that Billboards organized their data on a weekly basis, not a daily basis.
 
-I wrote some scripts that do a little bit of date manipulation in concordance with guoguo12's billboard API to get the most popular songs for any given year, parametrized by week or month. Feel free to steal it and use it on your own :)
+I wrote some scripts that do a little bit of date manipulation in concordance with guoguo12's billboard API to get the most popular songs for any given year, parametrized by week or month. Feel free to steal [it](https://github.com/rohankshir/lyrics_scraper/blob/master/billboards.py) and use it on your own :)
 
 {% highlight python %}
-import billboard
-from datetime import date
-from datetime import timedelta
-
-def get_dates_by_month(year):
-    ret = []
-    d = date(year = year, month = 1, day = 1)
-    ret.append(d)
-    while d.month < 12:
-        d = d.replace(month = d.month + 1)
-        ret.append(d)
-    return ret
-
-
-def get_dates_by_week(year):
-    ret = []
-    d = date(year = year, month = 1, day = 1)
-    delta = timedelta(days = 7)
-    while d.year == year:
-        ret.append(d)
-        d = d + delta
-    return ret
-
-def get_chart_entries(playlist, date):
-    chart = billboard.ChartData(playlist, str(date))
-    delta = timedelta(days = 1)
-    total_delta = timedelta(days = 0)
-    while len(chart.entries) == 0:
-        total_delta += delta
-        chart = billboard.ChartData(playlist, str(date + total_delta))
-    return (chart, total_delta)
-
-
-def get_charts(playlist, dates):
-    ret = []
-    delta = timedelta(days = 0)
-    for d in dates:
-        chart, delta = get_chart_entries(playlist, d + delta)
-        ret.append(chart)
-    return ret
-
-def get_n_most_frequent_entries(charts, n):
-    d = {}
-    for chart in charts:
-        for song in chart.entries:
-            if song.title not in d:
-                d[song.title] = 1
-            else:
-                d[song.title] += 1
-
-    l = [(k,v) for k,v in d.items()]
-    l.sort(key=lambda x: x[1])
-    l.reverse()
-    
-    return [title for title,freq in l[:n]]
-        
 charts = get_charts('r-b-hip-hop-songs', get_dates_by_week(2010))
 
 top_songs = get_n_most_frequent_entries(charts, 30)
@@ -106,7 +50,7 @@ for song in top_songs:
 
 {% endhighlight %}
 
-By the end I could get the *n* most popular songs of any given year, along with the artist information. Now that we could get the song titles, the next step was to scrape the lyrics for each of these songs. 
+By the end I could get the `n` most popular songs of any given year, along with the artist information. Now that we could get the song titles, the next step was to scrape the lyrics for each of these songs. 
 
 ##  Lyric Acquisition
 I scoured the webs for a database for rap music lyrics only to find what seems to be a fizzled-out project, [Hip Hop Word Count](http://www.fastcompany.com/3007753/hip-hop-word-count-living-breathing-database-every-word-every-rap-song-ever). Not sure what happened to project, but I spent a lot of time Googling only to be left empty handed. Frustrating.
