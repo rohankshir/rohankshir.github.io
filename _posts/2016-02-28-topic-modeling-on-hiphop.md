@@ -3,9 +3,9 @@ layout: post
 title: NLP on Hip Hop Music Part 1
 ---
 
-# How does music change over the years?
+# How has Hip Hop changed over the years?
 
-It's a challenging question one that is subject to many viewpoints and analyses. Music has changed so much over the years in so many different ways. New artists continue to spring to prominence. The production technology has advanced drastically, allowing for more iterations and interaction of different genres. Finally, lyrical themes have transformed.
+It's a challenging question one that is subject to many viewpoints and analyses. Music has changed so much over the years in so many different ways. New artists continue to spring to prominence. Production technology evolves rapidly, allowing for more iterations and interaction of different genres. The internet allows for more collaboration. I'm interested in how lyrical themes change.
 
 As an engineer who focuses in Natural Language Processing, I wanted to focus on answering two questions.
 
