@@ -219,11 +219,11 @@ parse(spec_uri3, "#vis8");
 
 </script>
 
-The larger the word, the more important the topic word is. Some of the topics from from 2000 to 2005 include dance, party, love, and tonight. From 2006 to 2009, a few of the topics include money, bitches/shawties, feel, and love. From 2010 to 2015, some of the major topics include fuck, bitches, girls, think, and love.
+The larger the word, the more important the topic word is. Some of the topics from from 2000 to 2005 include 'dance', 'party', 'love', and 'tonight'. From 2006 to 2009, a few of the topics include 'money', 'bitches/shawties', 'feel', and 'love'. From 2010 to 2015, some of the major topics include 'fuck', 'bitches', 'girls', 'think', and 'love'.
 
 ### Love is a common thread throughout hip-hop music and perhaps all music
 
-Not the most surprising find, but still worth noting how love is talked about. In 2001, the words related to the love topic include "girl alway goodby babi music suppos thing hurt emot" and "girl sometim babi peopl thought work stroke lifetim freak". In 2014, related words include "babi rock featur whoa light feel clap pussi potion" and "girl danc hold drunk song parti throw wiggl shake".
+Not the most surprising find, but still worth noting how love is talked about. In 2001, the words related to the love topic include: `'girl', 'always' 'goodbye' 'baby' 'music' 'suppose' 'thing' hurt' 'emotion' 'girl' 'sometime' baby' 'thought' 'work' 'stroke' 'lifetime' 'freak'`. In 2014, related words include:  `'rock' 'whoa' 'light' 'feel' 'clap' 'pussy' 'potion' 'girl' 'dance' 'hold' 'drunk' 'song' 'party' 'throw' 'wiggle' 'shake'`.
 
 This recontextualizes love from the romantic viewpoint to the carnal hedonistic one. Though the earlier years of hiphop aren't vindicated from wrongdoing altogether, love was still held in a positive virtuous light - and the lyrics focused more on devotion and dedication to love. Now we "love" when that "pussy clap" and that booty "wiggle".
 
@@ -231,7 +231,7 @@ Since this is taken from the top 100 Billboard charts, this is just a reflection
 
 ### The prominence of Fuck
 
-Another thing I've noticed is the rise and sustained growth of Fuck, the latest swiss army knife of an expletive, carving up top hits by the dozen. It can be used a a substitude for sex, kill, assault, insult, a unit of concern, and everything in between. I've had a hard time analyzing it's increased use in every day vernacular because I wasn't able to distinguish whether it was me just growing up and moving to New York City, or society actually used it more often. This provides some evidence for the latter. 
+Another thing I've noticed is the rise and sustained growth of Fuck, the latest swiss army knife of an expletive, carving up top hits by the dozen. It can be used a a substitude for sex, kill, assault, insult, a unit of concern, and everything in between. I've had a hard time analyzing it's increased use in every day vernacular because I wasn't able to distinguish whether it was me just growing up or society actually used it more often. This provides some evidence for the latter. 
 
 
 ## Further Research
