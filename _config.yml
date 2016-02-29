@@ -3,7 +3,7 @@ markdown:           kramdown
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
   
-highlighter:         pygments
+highlighter:         rouge
 
 # Permalinks
 #
@@ -17,7 +17,6 @@ tagline:             'Curiosity has its own reason for existing'
 description:         'A living work of my recent curiosities on NLP, programming, machine learning, and philosophies.'
 url:                 http://rohankshir.github.io
 baseurl:             /
-paginate:            5
 
 # About/contact
 author:
