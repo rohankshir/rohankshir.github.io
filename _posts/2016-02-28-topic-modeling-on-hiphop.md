@@ -196,7 +196,7 @@ def preprocess_word(s):
 
 # Results <a name="Results"></a>
 
-<div id="vis4"></div>
+<div id="vis6"></div>
 <center>Topic words 2000 to 2005</center>
 <br/>
 <div id="vis7"></div>
@@ -210,12 +210,12 @@ def preprocess_word(s):
 function parse(spec,div_id) {
   vg.parse.spec(spec, function(chart) { chart({el:div_id}).update(); });
 }
-spec_uri = "/public/hiphop_topics_vega_spec.json";
-parse(spec_uri, "#vis4");
-spec_uri = "/public/hiphop_2006-2010_vega_spec.json";
-parse(spec_uri, "#vis7");
-spec_uri = "/public/hiphop_2010-2014_vega_spec.json";
-parse(spec_uri, "#vis8");
+spec_uri1 = "/public/hiphop_topics_vega_spec.json";
+parse(spec_uri1, "#vis6");
+spec_uri2 = "/public/hiphop_2006-2010_vega_spec.json";
+parse(spec_uri2, "#vis7");
+spec_uri3 = "/public/hiphop_2010-2014_vega_spec.json";
+parse(spec_uri3, "#vis8");
 
 </script>
 
