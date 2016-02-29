@@ -56,7 +56,7 @@ for (size_t i = 0; i != NUM_KEYS; ++i) {
     
 {% endhighlight %}
 
-Here we populate the *same* keys to both the map and the vector (and any other data structures we'd like to measure). This gives us comparable performance, as well as a method to check the correctness of our code, aka. did the same queries give us the same results for both data structures?
+Here we populate the *same* keys to both the map and the vector and any other data structures we'd like to measure. This gives us comparable performance, as well as a method to check the correctness of our code, aka. did the same queries give us the same results for both data structures?
 
 ### Building Queries
 

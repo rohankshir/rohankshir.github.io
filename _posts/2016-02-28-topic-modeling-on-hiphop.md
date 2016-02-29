@@ -14,19 +14,21 @@ As an engineer who focuses in Natural Language Processing, I wanted to focus on 
 
 Using NLP to process these documents allows us to statistically model these problems and hopefully answer them. One technique that comes to mind is statistical topic modeling. 
 
-# Topic Modeling
-Topic modeling algorithms statistically analyze the words of the original texts to discover the themes that run through them. The key idea is to first come up with a model that allows to generate a collection of documents given a distribution of topics, and a distribution of words over each topic. Given the distribution, we can sample topics and words from this topics to build a document up, implying that each document is a mixture of topics.  However, we don't start out with the distributions, we only start out with the documents (songs in our case). We can use the observed documents to reverse the generative process and infer the hidden or latent structure, which are these topic and word distributions. 
+## Topic Modeling
+Topic modeling algorithms statistically analyze the words of the original texts to discover the themes that run through them. The key idea is to first come up with a model that allows to generate a collection of documents given a distribution of topics, and a distribution of words over each topic. Given the distribution, we can sample topics and words from this topics to build a document up, implying that each document is a mixture of topics.  However, we don't start out with the distributions, we only start out with the documents, songs in our case. We can use the observed documents to reverse the generative process and infer the hidden or latent structure, which are these topic and word distributions. 
 
 Why is this useful? As the amount of texts in our world grows exponentially, humans do not have the capacity to hand annotate all of the key topics of every document. Determining these topics can be very useful for search, discovery, categorization, and other downstream analysis. It gives us a way to dive into a large collection of documents by drilling down by topic.
 
-While in practice it has shown enormous value in categorizing research publications and news, there's been much less work in the music domain. Specifically hip-hop music. Hip Hop music is HUGE. How can we reduce the scope of our analysis to a manageable size, both for processing time and interpretability?
+While in practice it has shown enormous value in categorizing research publications and news, there's been much less work in the music domain. Specifically hip-hop music. Hip Hop music is a huge genre. How can we reduce the scope of our analysis to a manageable size, both for processing time and interpretability?
 
-# The Billboards
+## The Billboards
 While there is an enormous amount of production going on in Hip Hop, I will only be analyzing the most popular music of each year. Popularity is as much a reflection of culture as it is the genre itself. This follows the biggest bang for your buck philosophy.
 
 I'll walk through in detail how I accomplished each step and reveal some source code. Not interested? [Skip to the results](#Results)
 
 # Implementation
+
+Before we can run our NLP analysis, we need to first build a corpus of song lyrics.
 
 ## Title and Artist Acquisition
 
@@ -104,7 +106,7 @@ for song in top_songs:
 
 {% endhighlight %}
 
-By the end I could get the *n* most popular songs of any given year, along with the artist information. Now that we could get the song titles, the next step was to 
+By the end I could get the *n* most popular songs of any given year, along with the artist information. Now that we could get the song titles, the next step was to scrape the lyrics for each of these songs. 
 
 ##  Lyric Acquisition
 I scoured the webs for a database for rap music lyrics only to find what seems to be a fizzled-out project, [Hip Hop Word Count](http://www.fastcompany.com/3007753/hip-hop-word-count-living-breathing-database-every-word-every-rap-song-ever). Not sure what happened to project, but I spent a lot of time Googling only to be left empty handed. Frustrating.
