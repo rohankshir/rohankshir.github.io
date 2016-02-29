@@ -12,7 +12,7 @@ As an engineer who focuses in Natural Language Processing, I wanted to focus on 
 * What are the core themes of Hip Hop lyrics in any given year?
 * How have these themes evolved over the years?
 
-Using NLP to process these documents allows us to statistically model these problems and hopefully glean something useful. One technique that comes to mind is statistical topic modeling. 
+Using NLP to process these documents allows us to statistically model these problems and hopefully glean something interesting. One technique that comes to mind is statistical topic modeling. 
 
 ## Topic Modeling
 Topic modeling algorithms statistically analyze the words of the original texts to discover the themes that run through them. The key idea is to first come up with a model that allows to generate a collection of documents given a distribution of topics, and a distribution of words over each topic. Given the distribution, we can sample topics and words from this topics to build a document up, implying that each document is a mixture of topics.  However, we don't start out with the distributions, we only start out with the documents, songs in our case. We can use the observed documents to reverse the generative process and infer the hidden or latent structure, which are these topic and word distributions. 
@@ -41,12 +41,15 @@ After playing around with it for a bit in interactive python, I realized that it
 I wrote some scripts that do a little bit of date manipulation in concordance with guoguo12's billboard API to get the most popular songs for any given year, parametrized by week or month. Feel free to steal [it](https://github.com/rohankshir/lyrics_scraper/blob/master/billboards.py) and use it on your own :)
 
 {% highlight python %}
-charts = get_charts('r-b-hip-hop-songs', get_dates_by_week(2010))
-
-top_songs = get_n_most_frequent_entries(charts, 30)
-
+args = parser.parse_args()
+    
+charts = get_charts(args.chart, get_dates_by_month(args.year))
+	
+top_songs = get_n_most_frequent_entries(charts, args.number)
+    
 for song in top_songs:
     print song
+
 
 {% endhighlight %}
 
