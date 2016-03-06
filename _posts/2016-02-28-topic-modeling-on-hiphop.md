@@ -3,6 +3,8 @@ layout: post
 title: NLP on Hip Hop Music Part 1
 ---
 
+<link rel="stylesheet" href="{{ site.baseurl }}public/css/topic-modeling.css">
+
 # How has Hip Hop changed over the years?
 
 It's a challenging question one that is subject to many viewpoints and analyses. Music has changed so much over the years in so many different ways. New artists continue to spring to prominence. Production technology evolves rapidly, allowing for more iterations and interaction of different genres. The internet allows for more collaboration. I'm interested in how lyrical themes change.
@@ -143,16 +145,26 @@ def preprocess_word(s):
 
 # Results <a name="Results"></a>
 
+<div id="wrapper">
+<div id="apDiv1" class="fade current" style="display:none;">
 <div id="vis6"></div>
 <center>Topic words 2000 to 2005</center>
-<br/>
+</div>
+
+<div id="apDiv2" class="fade" style="display:none;">
 <div id="vis7"></div>
 <center>Topic words for 2005 to 2009</center>
-<br/>
-<div id="vis8"></div>
-<center>Topic Words for 2010 to 2014</center>
+</div>
 
-<script type="text/javascript">
+<div id="apDiv3" class="fade" style="display:none;">
+<div id="vis8" ></div>
+<center>Topic Words for 2010 to 2014</center>
+</div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+var divs = $('.fade');
 
 function parse(spec,div_id) {
   vg.parse.spec(spec, function(chart) { chart({el:div_id}).update(); });
@@ -164,7 +176,33 @@ parse(spec_uri2, "#vis7");
 spec_uri3 = "/public/hiphop_2010-2014_vega_spec.json";
 parse(spec_uri3, "#vis8");
 
+function fade() {
+    var current = $('.current');
+    var currentIndex = divs.index(current),
+        nextIndex = currentIndex + 1;
+    
+    if (nextIndex >= divs.length) {
+        nextIndex = 0;
+    }
+    
+    var next = divs.eq(nextIndex);
+
+    current.stop().fadeOut(2000, function() {
+        $(this).removeClass('current');
+        setTimeout(fade, 2500);
+    });
+
+    
+    next.stop().fadeIn(2000, function() {
+        $(this).addClass('current');
+    });
+    
+}
+
+fade();
 </script>
+
+
 
 The larger the word, the more important the topic word is. Some of the topics from from 2000 to 2005 include 'dance', 'party', 'love', and 'tonight'. From 2006 to 2009, a few of the topics include 'money', 'bitches/shawties', 'feel', and 'love'. From 2010 to 2015, some of the major topics include 'fuck', 'bitches', 'girls', 'think', and 'love'.
 

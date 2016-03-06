@@ -1,0 +1,3 @@
+#wrapper {position:relative;width:500px; height:500px;}
+
+.fade {position:absolute; top:0; left:0; display:none;}
