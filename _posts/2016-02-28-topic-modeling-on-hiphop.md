@@ -7,12 +7,88 @@ title: NLP on Hip Hop Music Part 1
 
 # How has Hip Hop changed over the years?
 
-It's a challenging question one that is subject to many viewpoints and analyses. Music has changed so much over the years in so many different ways. New artists continue to spring to prominence. Production technology evolves rapidly, allowing for more iterations and interaction of different genres. The internet allows for more collaboration. I'm interested in how lyrical themes change.
+It's a challenging question one that is subject to many viewpoints and analyses. Music has changed so much over the years in so many different ways. New artists continue to spring to prominence. Production technology evolves rapidly, allowing for more iterations and interaction of different genres. The internet allows for more collaboration. A small but interesting part of this change lies in how language is imbibed within Hip Hop music. 
 
-As an engineer who focuses in Natural Language Processing, I wanted to focus on answering two questions.
+
+<div id="wrapper" onclick="pauseFade()" >
+<a name="Words"></a>
+<div id="apDiv4" class="fadeA currentA" >
+<div id="vis12"></div>
+<center>Unique words from 2000</center>
+</div>
+
+<div id="apDiv5" class="fadeA" style="display:none;" >
+<div id="vis10"></div>
+<center>Words common from 2000 and 2014</center>
+</div>
+
+<div id="apDiv6" class="fadeA" style="display:none;">
+<div id="vis11" ></div>
+<center>Unique words from 2014</center>
+</div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+var divsA = $('.fadeA');
+var shouldFade = true;
+function parse(spec,div_id) {
+  vg.parse.spec(spec, function(chart) { chart({el:div_id}).update(); });
+}
+spec_uri1 = "/public/2000minus2014_spec.json";
+parse(spec_uri1, "#vis12");
+spec_uri2 = "/public/2000and2014_spec.json";
+parse(spec_uri2, "#vis10");
+spec_uri3 = "/public/2014minus2000_spec.json";
+parse(spec_uri3, "#vis11");
+
+function fade2() {
+	if (!shouldFade)
+	{
+		return;
+	}
+	
+    var current = $('.currentA');
+    var currentIndex = divsA.index(current),
+        nextIndex = currentIndex + 1;
+    
+    if (nextIndex >= divsA.length) {
+        nextIndex = 0;
+    }
+    
+    var next = divsA.eq(nextIndex);
+
+    current.stop().fadeOut(1000, function() {
+        $(this).removeClass('currentA');
+	    setTimeout(fade2, 3500);
+    });
+
+    
+    next.stop().fadeIn(1000, function() {
+        $(this).addClass('currentA');
+    });
+}
+
+fade2();
+
+function pauseFade() {
+	if (shouldFade) {
+		shouldFade = false
+	}
+	else {
+		shouldFade = true;
+		fade2();
+	}
+}
+
+
+</script>
+
+I wanted to focus on answering a few questions:
 
 * What are the core themes of Hip Hop lyrics in any given year?
 * How have these themes evolved over the years?
+* On a lower level, which sort of words and syntax weave together Hip Hop music?
 
 Using NLP to process these documents allows us to statistically model these problems and hopefully glean something interesting. One technique that comes to mind is statistical topic modeling. 
 
@@ -162,7 +238,7 @@ def preprocess_word(s):
 </div>
 
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
 <script>
 var divs = $('.fade');
 
@@ -202,8 +278,6 @@ function fade() {
 fade();
 </script>
 
-
-
 The larger the word, the more important the topic word is. Some of the topics from from 2000 to 2005 include 'dance', 'party', 'love', and 'tonight'. From 2006 to 2009, a few of the topics include 'money', 'bitches/shawties', 'feel', and 'love'. From 2010 to 2015, some of the major topics include 'fuck', 'bitches', 'girls', 'think', and 'love'.
 
 ### Love is a common thread throughout hip-hop music and perhaps all music
@@ -221,4 +295,4 @@ Another thing I've noticed is the rise and sustained growth of Fuck, the latest 
 
 ## Further Research
 
-While topic modeling didn't work out as ideally as initially expected, it yielded some good insights that lend themselves to further exploration. Namely, vernacular, word choice and meaning, and how it changes with time. In our next post, we'll dive deeper into that. Hope you enjoyed. Cheers!
+While topic modeling didn't work out as ideally as initially expected, it yielded some good insights that lend themselves to further exploration. Namely, vernacular, word choice and meaning, and how it changes with [time](#Words). In our next post, we'll dive deeper into that. Hope you enjoyed. Cheers!
