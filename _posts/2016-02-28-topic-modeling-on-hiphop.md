@@ -7,7 +7,7 @@ title: NLP on Hip Hop Music Part 1
 
 # How has Hip Hop changed over the years?
 
-It's a challenging question one that is subject to many viewpoints and analyses. Music has changed so much over the years in so many different ways. New artists continue to spring to prominence. Production technology evolves rapidly, allowing for more iterations and interaction of different genres. The internet allows for more collaboration. A small but interesting part of this change lies in how language is imbibed within Hip Hop music. 
+It's a challenging question that is subject to many viewpoints and analyses. Music has changed so much over the years in so many different ways. New artists continue to spring to prominence. Production technology evolves rapidly, allowing for more iterations and interaction of different genres. The internet allows for more collaboration. A small but interesting part of this change lies in how language is imbibed within Hip Hop music. Here's a quick example of what a quick analysis with `tf-idf`, as explained in a [previous post]({% post_url 2015-10-30-analyzing-twitter-part-2 %}), can reveal.
 
 
 <div id="wrapper" onclick="pauseFade()" >
@@ -84,7 +84,9 @@ function pauseFade() {
 
 </script>
 
-I wanted to focus on answering a few questions:
+The above visualization shows a comparison of commonly used words from the years 2000 and 2014, how they differed and how aligned. Take a look at it and think for a bit - you can pause the animation by clicking on it. Notice how words like "cheese", "champagne", "holla" have been ditched for "booty", "cash", "damn". We've just scratched the surface here but I encourage you to draw your own conclusions. 
+
+I want to focus on answering the following questions:
 
 * What are the core themes of Hip Hop lyrics in any given year?
 * How have these themes evolved over the years?
@@ -288,9 +290,10 @@ This recontextualizes love from the romantic viewpoint to the carnal hedonistic 
 
 Since this is taken from the top 100 Billboard charts, this is just a reflection of society as much as Hip-hop. I wouldn't be surprised if this trend was seen across genres, not only in lyrics, but music videos as well. 
 
-### The prominence of Fuck
+### The prominence of Fuck and death of Shawties
 
 Another thing I've noticed is the rise and sustained growth of Fuck, the latest swiss army knife of an expletive, carving up top hits by the dozen. It can be used a a substitude for sex, kill, assault, insult, a unit of concern, and everything in between. I've had a hard time analyzing it's increased use in every day vernacular because I wasn't able to distinguish whether it was me just growing up or society actually used it more often. This provides some evidence for the latter. 
+
 
 
 ## Further Research

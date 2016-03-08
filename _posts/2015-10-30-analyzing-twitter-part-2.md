@@ -6,7 +6,7 @@ title: Analyzing Twitter Part 2
 
 In the [last post]({% post_url 2015-06-30-analyzing-twitter-part-1 %}), we motivated why Twitter is interesting and got started on acquiring a corpus of tweets. In this post, we'll be talking about getting acquainted with the data. Instead of looking at our data set as such a data set, we'll slice it in a couple of ways to become familiar with it, and understand what we're working with.
 
-##tf-idf
+## tf-idf
 
 `tf-idf` stands for term frequency-inverse document frequency. The definition, supplied by [Wikipedia](https://en.wikipedia.org/wiki/Tf%E2%80%93idf), is a measure of how important the word is to a document in a collection of documents. Words with a high term frequency like 'the' and 'of' appear very frequently, and are offset by the inverse document frequency, 
 

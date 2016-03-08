@@ -190,17 +190,6 @@ a.sidebar-nav-item:focus {
   border-color: transparent;
 }
 
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-
 @media (min-width: 48em) {
   .sidebar-item {
     padding: 1.5rem;
@@ -217,20 +206,6 @@ a.sidebar-nav-item:focus {
 }
 
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
-
-.fade-toggle {
-  position: absolute;
-  top:  1rem;
-  left: 1rem;
-  display: block;
-  width: 2.2rem;
-  padding: .5rem .65rem;
-  color: #505050;
-  background-color: #fff;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
 .sidebar-toggle {
   position: absolute;
   top:  1rem;
