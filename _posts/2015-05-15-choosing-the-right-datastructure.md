@@ -74,7 +74,7 @@ This is important. We are generating the queries beforehand and storing them. Th
 
 1.	the cost of generating a query is not baked into the measurement of querying
 2.	The same queries can be executed on both the map and the vector
-3.	If we wanted, the queries could be manipulated in several ways ( sorted, shuffled, etc.)
+3.	If we wanted, the queries could be manipulated in several ways [ sorted, shuffled, etc.]
 
 ### Querying
 
@@ -323,7 +323,7 @@ The **red** points in the scatter plot are the measurements for `std::unordered_
 
 **Having a mediocre hash function can crush performance**
 
-Using a compound key forces us to come up with an ad-hoc hash function. While the hash functions for primitive types such as integers tend to be uniform and well studied, those of combined forms are most likely not. We stole Boost's `::hash_combine` implementation, yet our performance still degraded. Bad hashing functions lead to collisions and adding additional links in our linked list (see how a hashmap works here). Navigating linked lists lead to a lot of pointer look ups, aka more cache misses.
+Using a compound key forces us to come up with an ad-hoc hash function. While the hash functions for primitive types such as integers tend to be uniform and well studied, those of combined forms are most likely not. We stole Boost's `::hash_combine` implementation, yet our performance still degraded. Bad hashing functions lead to collisions and adding additional links in our linked list [see how a hashmap works here](http://javarevisited.blogspot.com/2011/02/how-hashmap-works-in-java.html). Navigating linked lists lead to a lot of pointer look ups, aka more cache misses.
 
 On the flipside, the  `unordered_map<key 1, vector<key 2, value> >` has predictable look up performance, since the hashing is only applied on a single integer instead of combining two of them. Once we find the vector, scanning through the vector is fast because of [locality of reference](http://en.wikipedia.org/wiki/Locality_of_reference).
 
